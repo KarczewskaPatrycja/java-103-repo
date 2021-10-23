@@ -42,9 +42,16 @@ public class Exercise8 {
                 System.out.println(result);
             }
             if (znak.equals("/")) {
-                float result = a / b;
-                System.out.println(result);
-            }
+                // sprawdzenie, czy druga zmienna nie jest zerem oraz
+                if(b!=0) {
+
+                    float result = a / b;
+                    System.out.println(result);
+                }else {
+                    System.out.println("niezgodne z zasadami matematyki");
+                }
+                        }
+
         } else {
             System.out.println("Błędny znak");
 
