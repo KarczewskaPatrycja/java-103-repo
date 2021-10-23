@@ -27,7 +27,7 @@ public class Exercise3 {
 
     static void quadraticEquation(int a, int b, int c) {
 
-        int delta = (int) Math.pow(b, 2) - 4 * a * c;
+        float delta = (float) Math.pow(b, 2) - 4 * a * c;
         if (delta >= 0) {
 
             System.out.println(delta);
@@ -39,7 +39,7 @@ public class Exercise3 {
             float x2 = (-(float) b + (float) Math.sqrt(delta)) / (2 * a);
             System.out.println("x2=" + x2);
         } else {
-            System.out.println("Delta jest ujemna, ne da się wyliczyć pierwiastków równania");
+            System.out.println("delta nie może być ujemna");
 
         }
 
