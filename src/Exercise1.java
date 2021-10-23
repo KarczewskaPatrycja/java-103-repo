@@ -20,15 +20,9 @@ public class Exercise1 {
 
 // PI definiowane za pomocą funkcji Math
 
-        double cir =  Math.PI * userInput;
+        float cir = (float) Math.PI * userInput;
         System.out.println("obwód okręgu to: "+cir);
 
 
-
-
-
-
     }
-
-
 }
