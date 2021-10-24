@@ -24,9 +24,11 @@ public class Main {
 
     static void printPoemArray(Poem[] arrayPoem) {
         for (int i = 0; i < arrayPoem.length; i++) {
-//            System.out.println(arrayPoem[i].getStropheNumbers());
-//            System.out.println(arrayPoem[i].getCreator().getSurname());
-//            System.out.println(arrayPoem[i].getCreator().getNationality());
+/*
+            System.out.println(arrayPoem[i].getStropheNumbers());
+            System.out.println(arrayPoem[i].getCreator().getSurname());
+            System.out.println(arrayPoem[i].getCreator().getNationality());
+*/
         }
     }
 
