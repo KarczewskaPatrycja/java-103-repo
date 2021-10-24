@@ -34,17 +34,18 @@ public class Exercise15 {
         arrayUserInt[2] = userInt3;
         arrayUserInt[3] = userInt4;
 
-
+        int array=0;
 
         for (int i = 0; i < arrayUserInt.length; i++) {
             for (int j = 0; j < arrayUserInt.length; j++) {
                 if (i!=j && arrayUserInt[i] == arrayUserInt[j]) {
 
-                    int array =  arrayUserInt[i];
-                    System.out.println(array);
+                     array =  arrayUserInt[i];
+
                 }
             }
-        } //żle wyświetla wynik bo x 2
+        }
+        System.out.println(array);
     }
 }
 
