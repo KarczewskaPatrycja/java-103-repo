@@ -44,7 +44,7 @@ public class Exercise15 {
                     System.out.println(array);
                 }
             }
-        }
+        } //żle wyświetla wynik bo x 2
     }
 }
 
