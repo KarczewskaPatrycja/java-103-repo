@@ -26,6 +26,4 @@ public class Exercise13 {
             System.out.print(actualValue[i]);
         }
     }
-
-
 }
