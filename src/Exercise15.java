@@ -1,5 +1,6 @@
 import java.util.Scanner;
 
+
 public class Exercise15 {
     public static void main(String[] args) {
 
@@ -36,16 +37,19 @@ public class Exercise15 {
 
         int array=0;
 
+
         for (int i = 0; i < arrayUserInt.length; i++) {
-            for (int j = 0; j < arrayUserInt.length; j++) {
+            for (int j=0 ; j < arrayUserInt.length; j++) {
                 if (i!=j && arrayUserInt[i] == arrayUserInt[j]) {
 
-                     array =  arrayUserInt[i];
+                     array =  arrayUserInt[j];
 
-                }
             }
+
+            }System.out.println(array);
         }
-        System.out.println(array);
+
+
     }
 }
 
