@@ -12,15 +12,15 @@ public class Exercises25 {
 
         System.out.println(Arrays.toString(userText));
 
-        encryption(userText);
+        encryption(userText,n);
 
         System.out.println();
 
-        decryption(userText);
+        decryption(userText,n);
 
 
 
-        } public static void encryption(char[] userText) {
+        } public static void encryption(char[] userText, int n) {
 
         for (int i = 0; i < userText.length; i++) {
 
@@ -28,7 +28,7 @@ public class Exercises25 {
             if (userText[i] != ' ') {
 
 
-                int index = (int) userText[i] + 3;
+                int index = (int) userText[i] + n;
                 userText[i] = (char) index;
 
                 System.out.print(userText[i] + " ");
@@ -38,7 +38,7 @@ public class Exercises25 {
 
             }
         }
-    } public static void decryption(char[] userText) {
+    } public static void decryption(char[] userText, int n) {
 
         for (int i = 0; i < userText.length; i++) {
 
@@ -46,7 +46,7 @@ public class Exercises25 {
             if (userText[i] != ' ') {
 
 
-                int index = (int) userText[i] - 3;
+                int index = (int) userText[i] - n;
                 userText[i] = (char) index;
 
                 System.out.print(userText[i] + " ");
