@@ -40,6 +40,5 @@ public class Exercise17 {
 
                System.out.println("The differencece in days is : " + difference);
             }
-
     }
 
