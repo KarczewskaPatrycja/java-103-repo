@@ -1,3 +1,5 @@
+import java.time.LocalDate;
+import java.time.temporal.ChronoUnit;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -9,6 +11,12 @@ public class Exercise20 {
 //    program powinien wypisać „za mało” i analogicznie czekać na następną liczbę.
 //    Jeśli użytkownik poda odpowiednią wartość, to program powinien wypisać słowo „Bingo!” i zakończyć się.
 
+
+    //Czy użytkownik ma 18 lat
+    //czy użytkownik wprowadził dodatnią liczbę
+    //tylko możliwe 4 losowania
+
+
 // GRA : ZA DUŻO, ZA MAŁO
 
     //  Losowanie liczby z zakrsu od 0 do 100
@@ -16,32 +24,94 @@ public class Exercise20 {
     public static void main(String[] args) {
 
 
-        Random random = new Random();
-        int val1 = random.nextInt(101);
-        System.out.println("Random Integer value : " + val1);
+        int differenceAge = checkAge18(printUserAge());
+        check(differenceAge);
 
-        //  Podanie liczby przez użytkownika
+
+    }
+
+
+    public static int checkAge18(String userAge) {
+
+        LocalDate today = LocalDate.now();
+        System.out.println(today.toString());
+
+        LocalDate UserAge = LocalDate.parse(userAge);
+        int difference = (int) ChronoUnit.YEARS.between(UserAge, today);
+        return difference;
+    }
+
+    public static String printUserAge() {
 
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Podaj liczbę:");
-        int userInteger = scanner.nextInt();
+        System.out.println("podaj datę urodzenia");
+        String userAge = scanner.nextLine();
+        return userAge;
+    }
 
-        //  sprawdzenie liczby z liczbą losowaną
+    public static void check(int differenceAge) {
 
-        while (val1 != userInteger) {
+        if (Math.abs(differenceAge) >= 18) {
 
-            if (userInteger > val1) {
-                System.out.println("za dużo");
 
-                System.out.println("Podaj liczbę:");
-                userInteger = scanner.nextInt();
-            } else {
-                System.out.println("za mało");
+            Random random = new Random();
+            int val1 = random.nextInt(101);
+            System.out.println("Random Integer value : " + val1);
 
-                System.out.println("Podaj liczbę:");
-                userInteger = scanner.nextInt();
+            //  Podanie liczby przez użytkownika
+
+            Scanner scanner = new Scanner(System.in);
+            System.out.println("Podaj liczbę:");
+            int userInteger = scanner.nextInt();
+
+            //  sprawdzenie liczby z liczbą losowaną
+
+
+            while (val1 != userInteger) {
+
+                if (userInteger < 0) {
+                    System.out.println("liczba nie może być ujemna");
+                    System.out.println("Podaj liczbę:");
+                    userInteger = scanner.nextInt();
+
+                } else if (userInteger >= 0) {
+
+                    if (userInteger > val1) {
+                        System.out.println("za dużo");
+
+                        System.out.println("Podaj liczbę:");
+                        userInteger = scanner.nextInt();
+                    } else {
+                        System.out.println("za mało");
+
+                        System.out.println("Podaj liczbę:");
+                        userInteger = scanner.nextInt();
+                    }
+                }
+
             }
-        }System.out.println("Bingo");
+
+            System.out.println("Bingo");
+        } else {
+            System.out.println("nie masz 18 lat, wróć jak dorośniesz");
+        }
+    }
+
+    public static void printMessageToUser(int numberOfRandom) {
+
+        int count = 1;
+        while (count <= numberOfRandom)
+
+            System.out.println("podaj liczbę do sprawdzenia");
+
+        count++;
+
+
     }
 }
+
+
+
+
+
 
